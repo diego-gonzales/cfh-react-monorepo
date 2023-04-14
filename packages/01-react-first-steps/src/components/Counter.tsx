@@ -17,11 +17,17 @@ const Counter = ({ value }: { value: number }) => {
   return (
     <div>
       <h2>Counter</h2>
-      <p>{counter}</p>
+      <p data-testid="test-counter">{counter}</p>
 
-      <button onClick={handleSubstract}>-</button>
-      <button onClick={handleReset}>Reset</button>
-      <button onClick={handleAdd}>+</button>
+      <button aria-label="btn-add" onClick={handleSubstract}>
+        -
+      </button>
+      <button aria-label="btn-reset" onClick={handleReset}>
+        Reset
+      </button>
+      <button aria-label="btn-substract" onClick={handleAdd}>
+        +
+      </button>
     </div>
   );
 };

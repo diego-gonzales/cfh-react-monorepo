@@ -2,10 +2,8 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { GifSearcher } from './components/GifSearcher'
 import { GifList } from './components/GifList'
-import { GifShorterInfo, GiphyResponse } from './types'
-
-const API_KEY = 'zsSARSb3Azb6j1l1MTrML5TgbYmezBvd'
-const API_URL = 'https://api.giphy.com/v1/gifs/search'
+import { GifShorterInfo } from './types'
+import { getGifs } from './services/giphy.service'
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('')
@@ -16,18 +14,9 @@ function App() {
   }
 
   useEffect(() => {
-    fetch(`${API_URL}?api_key=${API_KEY}&q=${searchTerm}&limit=10`)
-      .then((res) => res.json())
-      .then(({ data }: GiphyResponse) => {
-        const newData = data.map((gif) => {
-          return {
-            id: gif.id,
-            title: gif.title,
-            image: gif.images.preview_webp.url,
-          }
-        })
-        setGifs(newData)
-      })
+    getGifs(searchTerm)
+      .then((resp) => setGifs(resp))
+      .catch(console.error)
   }, [searchTerm])
 
   return (

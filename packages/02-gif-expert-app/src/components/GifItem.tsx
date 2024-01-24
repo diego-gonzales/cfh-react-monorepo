@@ -1,4 +1,4 @@
-import { GifShorterInfo } from '../types'
+import { type GifShorterInfo } from '../types'
 
 interface Props {
   gif: GifShorterInfo

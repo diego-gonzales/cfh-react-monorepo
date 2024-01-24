@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { GifSearcher } from './components/GifSearcher'
 import { GifList } from './components/GifList'
-import { GifShorterInfo } from './types'
+import { type GifShorterInfo } from './types'
 import { getGifs } from './services/giphy.service'
 
 function App() {
@@ -15,7 +15,9 @@ function App() {
 
   useEffect(() => {
     getGifs(searchTerm)
-      .then((resp) => setGifs(resp))
+      .then((resp) => {
+        setGifs(resp)
+      })
       .catch(console.error)
   }, [searchTerm])
 

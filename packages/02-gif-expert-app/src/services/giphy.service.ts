@@ -1,4 +1,4 @@
-import { GifShorterInfo, GiphyResponse } from '../types'
+import { type GifShorterInfo, type GiphyResponse } from '../types'
 
 const API_KEY = 'zsSARSb3Azb6j1l1MTrML5TgbYmezBvd'
 const API_URL = 'https://api.giphy.com/v1/gifs/search'

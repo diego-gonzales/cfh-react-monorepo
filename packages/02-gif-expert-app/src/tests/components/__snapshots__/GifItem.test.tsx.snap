@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test GifItem should match snapshot 1`] = `
+<div>
+  <li>
+    <div
+      class="card w-full bg-base-100 shadow-xl"
+    >
+      <figure>
+        <img
+          alt="Naruto"
+          class="h-52 object-cover"
+          src="https://one-punch.com/naruto.jpg"
+        />
+      </figure>
+      <div
+        class="card-body"
+      >
+        <small
+          class="text-center"
+        >
+          Naruto
+        </small>
+      </div>
+    </div>
+  </li>
+</div>
+`;

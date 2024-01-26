@@ -6,6 +6,8 @@ export function useGifs(searchTerm: string = '') {
   const [gifs, setGifs] = useState<GifShorterInfo[]>([])
 
   useEffect(() => {
+    if (!searchTerm) return
+
     getGifs(searchTerm)
       .then((resp) => {
         setGifs(resp)

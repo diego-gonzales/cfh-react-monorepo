@@ -8,9 +8,9 @@ exports[`Test GifItem should match snapshot 1`] = `
     >
       <figure>
         <img
-          alt="Naruto"
+          alt="gif 1"
           class="h-52 object-cover"
-          src="https://one-punch.com/naruto.jpg"
+          src="https://localhost/gif1.gif"
         />
       </figure>
       <div
@@ -19,7 +19,7 @@ exports[`Test GifItem should match snapshot 1`] = `
         <small
           class="text-center"
         >
-          Naruto
+          gif 1
         </small>
       </div>
     </div>

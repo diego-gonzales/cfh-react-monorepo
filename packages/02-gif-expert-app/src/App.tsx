@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import { GifSearcher } from './components/GifSearcher'
 import { GifList } from './components/GifList'
 import { useGifs } from './hooks/useGifs'

@@ -1,25 +1,16 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import { GifSearcher } from './components/GifSearcher'
 import { GifList } from './components/GifList'
-import { type GifShorterInfo } from './types'
-import { getGifs } from './services/giphy.service'
+import { useGifs } from './hooks/useGifs'
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('')
-  const [gifs, setGifs] = useState<GifShorterInfo[]>([])
+  const { gifs } = useGifs(searchTerm)
 
   const handleSearch = (searchTerm: string) => {
     setSearchTerm(searchTerm)
   }
-
-  useEffect(() => {
-    getGifs(searchTerm)
-      .then((resp) => {
-        setGifs(resp)
-      })
-      .catch(console.error)
-  }, [searchTerm])
 
   return (
     <>

@@ -1,8 +1,9 @@
+import { Button } from '../components/Button'
 import { Input } from '../components/Input'
 import { useForm } from '../hooks/useForm'
 
 export const LoginImproved = () => {
-  const { myForm, handleInputChange } = useForm({
+  const { myForm, handleInputChange, handleReset } = useForm({
     username: '',
     email: '',
     password: '',
@@ -32,7 +33,7 @@ export const LoginImproved = () => {
           />
         </div>
 
-        <div>
+        <div className="mb-2">
           <Input
             name="password"
             placeholder="Password"
@@ -40,6 +41,12 @@ export const LoginImproved = () => {
             value={myForm.password}
             onChange={handleInputChange}
           />
+        </div>
+
+        <div>
+          <Button type="button" onClick={handleReset}>
+            Reset
+          </Button>
         </div>
       </form>
     </>

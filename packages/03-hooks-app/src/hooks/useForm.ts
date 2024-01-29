@@ -12,5 +12,9 @@ export function useForm<T>(initialForm: T) {
     })
   }
 
-  return { myForm, handleInputChange }
+  const handleReset = () => {
+    setMyForm(initialForm)
+  }
+
+  return { myForm, handleInputChange, handleReset }
 }

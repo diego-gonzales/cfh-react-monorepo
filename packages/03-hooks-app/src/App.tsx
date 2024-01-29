@@ -1,5 +1,6 @@
 import { Counter } from './components/Counter'
 import { CounterImproved } from './components/CounterImproved'
+import { Login } from './components/Login'
 
 function App() {
   return (
@@ -8,8 +9,12 @@ function App() {
         <Counter />
       </div>
 
-      <div>
+      <div className="mb-4">
         <CounterImproved />
+      </div>
+
+      <div>
+        <Login />
       </div>
     </>
   )

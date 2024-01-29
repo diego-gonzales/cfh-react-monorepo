@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Input } from './Input'
-import { Message } from './Message'
+import { Input } from '../components/Input'
+import { Message } from '../components/Message'
 
 export const Login = () => {
   const [myForm, setMyForm] = useState({
@@ -33,6 +33,7 @@ export const Login = () => {
 
   return (
     <>
+      <h3>LoginImproved</h3>
       <form className="max-w-lg">
         <div className="mb-2">
           <Input
@@ -55,7 +56,7 @@ export const Login = () => {
         </div>
       </form>
 
-      {myForm.email === 'Diego Eduardo' && <Message />}
+      {myForm.email === 'Diego G' && <Message />}
     </>
   )
 }

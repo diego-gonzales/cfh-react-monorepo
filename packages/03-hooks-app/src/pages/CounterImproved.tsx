@@ -1,5 +1,5 @@
 import { useCounter } from '../hooks/useCounter'
-import { Button } from './Button'
+import { Button } from '../components/Button'
 
 export const CounterImproved = () => {
   const { counter, increment, decrement, reset } = useCounter()

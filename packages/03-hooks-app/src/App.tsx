@@ -1,6 +1,7 @@
-import { Counter } from './components/Counter'
-import { CounterImproved } from './components/CounterImproved'
-import { Login } from './components/Login'
+import { Counter } from './pages/Counter'
+import { CounterImproved } from './pages/CounterImproved'
+import { Login } from './pages/Login'
+import { LoginImproved } from './pages/LoginImproved'
 
 function App() {
   return (
@@ -13,8 +14,12 @@ function App() {
         <CounterImproved />
       </div>
 
-      <div>
+      <div className="mb-2">
         <Login />
+      </div>
+
+      <div>
+        <LoginImproved />
       </div>
     </>
   )

@@ -1,7 +1,16 @@
+import { Counter } from './components/Counter'
+import { CounterImproved } from './components/CounterImproved'
+
 function App() {
   return (
     <>
-      <div>Hello World!</div>
+      <div className="mb-4">
+        <Counter />
+      </div>
+
+      <div>
+        <CounterImproved />
+      </div>
     </>
   )
 }

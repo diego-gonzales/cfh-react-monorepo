@@ -14,19 +14,21 @@ export function useFetch<T>(url: string) {
   })
 
   const getData = async () => {
-    setState({
-      ...state,
-      isLoading: true,
-    })
+    setState({ ...state, isLoading: true })
 
-    const resp = await fetch(url)
-    const data = await resp.json()
+    const response = await fetch(url)
 
-    setState({
-      data,
-      isLoading: false,
-      hasError: null,
-    })
+    if (!response.ok) {
+      setState({
+        data: null,
+        isLoading: false,
+        hasError: 'Error fetching data',
+      })
+      return
+    }
+
+    const data = await response.json()
+    setState({ data, isLoading: false, hasError: null })
   }
 
   useEffect(() => {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Input } from '../components/Input'
-import { Message } from '../components/Message'
+import { Input } from '../components/shared/Input'
+import { Message } from '../components/shared/Message'
 
 export const Login = () => {
   const [myForm, setMyForm] = useState({

@@ -7,6 +7,7 @@ import {
   MultipleCustomHooks,
 } from './pages'
 import { TryingMemo } from './pages/TryingMemo'
+import { TryingUseMemoHook } from './pages/TryingUseMemoHook'
 
 function App() {
   return (
@@ -43,6 +44,11 @@ function App() {
 
       <div className="mb-2">
         <TryingMemo />
+      </div>
+      <hr />
+
+      <div className="mb-2">
+        <TryingUseMemoHook />
       </div>
     </>
   )

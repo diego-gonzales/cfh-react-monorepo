@@ -5,7 +5,7 @@ import { useCounter } from '../hooks'
 // here we use the 'memo' to avoid that this component re-renders when it is no necessary
 // It's only necessary when we our app is too slow (Recommended for React people)
 const MyParagraph = memo(({ value }: { value: number }) => {
-  console.log("I'am rendering")
+  console.log("I'am rendering to try memo()")
 
   return <p>{value}</p>
 })

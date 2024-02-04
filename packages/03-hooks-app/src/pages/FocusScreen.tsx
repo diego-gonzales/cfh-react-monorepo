@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { Button } from '../components/shared/Button'
 import { Input } from '../components/shared/Input'
 
+// In this component we are trying the useRef() hook
 export const FocusScreen = () => {
   const inputRef = useRef<HTMLInputElement | null>(null)
 

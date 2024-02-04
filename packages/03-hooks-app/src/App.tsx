@@ -1,8 +1,11 @@
-import { Counter } from './pages/Counter'
-import { CounterImproved } from './pages/CounterImproved'
-import { Login } from './pages/Login'
-import { LoginImproved } from './pages/LoginImproved'
-import { MultipleCustomHooks } from './pages/MultipleCustomHooks'
+import {
+  Counter,
+  CounterImproved,
+  FocusScreen,
+  Login,
+  LoginImproved,
+  MultipleCustomHooks,
+} from './pages'
 
 function App() {
   return (
@@ -25,6 +28,10 @@ function App() {
 
       <div className="mb-2">
         <MultipleCustomHooks />
+      </div>
+
+      <div className="mb-2">
+        <FocusScreen />
       </div>
     </>
   )

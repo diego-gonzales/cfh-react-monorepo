@@ -2,6 +2,7 @@ import { Counter } from './pages/Counter'
 import { CounterImproved } from './pages/CounterImproved'
 import { Login } from './pages/Login'
 import { LoginImproved } from './pages/LoginImproved'
+import { MultipleCustomHooks } from './pages/MultipleCustomHooks'
 
 function App() {
   return (
@@ -18,8 +19,12 @@ function App() {
         <Login />
       </div>
 
-      <div>
+      <div className="mb-2">
         <LoginImproved />
+      </div>
+
+      <div className="mb-2">
+        <MultipleCustomHooks />
       </div>
     </>
   )
